@@ -1,0 +1,49 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Settings and Preferences</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            fieldset {
+                margin-bottom: 20px;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px  ;
+            }
+            legend {
+                font-weight: bold;
+            }
+        </style>
+        </head>
+        <body>
+            <h2>Settings and Preferences</h2>
+            <link rel="stylesheet" href="form3-style.css">
+            <form action="/savesettings" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Volume Settings</legend>
+                    <label for="volume">Preferred Volume (0-100):</label>
+                    <input type="range" id="volume" name="volume" min="0" max="100" value="50"><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Theme Settings</legend>
+                    <label for="theme">Choose Theme Color:</label>
+                    <input type="color" id="theme" name="theme" value="#ffffff"><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Coding Hours</legend>
+                    <label for="coding_hours">Daily Coding Hours (1-24):</label>
+                    <input type="number" id="coding_hours" name="coding_hours" min="1" max="24" value="8"><br>
+                </fieldset>
+
+                <input type="hidden" name="user_id" value="12345">
+
+                <button type="submit">Save Settings</button>
+                <button type="reset">Reset</button>
+            </form>
+            </body>
+    </html>

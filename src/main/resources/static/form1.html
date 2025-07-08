@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <title>Registeration form</title>
+    <link rel="stylesheet" href="form1-style.css">
+    <head>
+        <style>
+
+              body {
+            font-family: Arial, sans-serif;
+            margin-right: 20px;
+        }
+        div{
+            margin-bottom:15px
+        }
+        </style>
+    </head>
+    <body>
+    <form method="post" action="/register" enctype="multipart/form-data">
+        
+        <h2>User Registration Form</h2>
+        <div >
+        <label for="fullname">Full Name</label>
+        <input type =text name ="fullname" id="fullname" placeholder="Full Name" required><br>
+        </div>
+        <div>
+        <label for ="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Gmail only" required><br>
+        </div>
+        <div>
+        <label for="password">Password</label> 
+        <input type="password" name="password" id="password" placeholder="at least 6 characters" required minlength="6"><br>
+        </div>
+        <div >          
+        <label for ="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob"><br>
+        </div>
+        <div>
+        <p>Select your Gender:</p>
+        <input type ="radio" name="gender" id="male" value="male">
+        <label for ="male">Male</label><br>
+       </div>
+       <div>
+        <input type ="radio" name="gender" id="female" value="female">
+        <label for ="female">Female</label><br>
+       </div>
+       <div>
+        <input type ="radio" name="gender" id="other" value="other">
+        <label for ="other">Other</label><br>
+        </div>
+        <div>
+        <label for="profilephoto">Profile Photo</label>
+        <input type="file" name="profilephoto" id="profilephoto" accept="image/*"><br>
+        </div>
+        <div>
+        <button type="submit" name="submit">Register</button>
+        </div>
+    </form>
+    </body>
+</html>
